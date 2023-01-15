@@ -103,12 +103,10 @@ Now, we'll create an index for the vector field :code:`title_vector` in the coll
 
 In the above snippet, we have set :code:`index_type` to :code:`IVF_FLAT` and :code:`metric_type` to :code:`IP`. There are also other index types and metric types. For details, see `In-memory Index <https://milvus.io/docs/index.md>`_ and `On-disk Index <https://milvus.io/docs/disk_index.md>`_.
 
-Running :doc:`pymilvus/create_index` lasts for a little while, no matter what index type is in use. Therefore, take a sip of coffee if it is by your hands and wait for the index to be created.
+Running :doc:`pymilvus/create_index` lasts for a little while, no matter what index type is in use. Just take a sip of coffee if it is by your hands and wait for the index to be created.
 
 Till now, a brand new collection is ready for data input. Congrats!
 
 Insert Some Entities
 --------------------
-
-
 

@@ -9,6 +9,7 @@
 <title>Tutorial | PyMilvus 2.3.0 documentation</title>
 <link href="_static/pygments.css" rel="stylesheet"/>
 <link href="_static/theme.9297a650d9dd3016d913.css" rel="stylesheet"/>
+<link href="_static/custom.css" rel="stylesheet"/>
 <link href="search.html" rel="search" title="Search"/>
 <link href="genindex.html" rel="index" title="Index"/>
 <link href="pymilvus/index.html" rel="next" title="API Reference"/>
@@ -211,7 +212,7 @@
 <span class="gp">&gt;&gt;&gt; </span><span class="n">task</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
 </code></pre></div></div>
 <p>In the above snippet, we have set <code class="code docutils literal notranslate">index_type</code> to <code class="code docutils literal notranslate">IVF_FLAT</code> and <code class="code docutils literal notranslate">metric_type</code> to <code class="code docutils literal notranslate">IP</code>. There are also other index types and metric types. For details, see <a class="reference external" href="https://milvus.io/docs/index.md" rel="nofollow noopener">In-memory Index<svg aria-hidden="true" class="external-link-icon" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></a> and <a class="reference external" href="https://milvus.io/docs/disk_index.md" rel="nofollow noopener">On-disk Index<svg aria-hidden="true" class="external-link-icon" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></a>.</p>
-<p>Running <a class="reference internal" href="pymilvus/create_index.html"><span class="doc">create_index()</span></a> lasts for a little while, no matter what index type is in use. Therefore, take a sip of coffee if it is by your hands and wait for the index to be created.</p>
+<p>Running <a class="reference internal" href="pymilvus/create_index.html"><span class="doc">create_index()</span></a> lasts for a little while, no matter what index type is in use. Just take a sip of coffee if it is by your hands and wait for the index to be created.</p>
 <p>Till now, a brand new collection is ready for data input. Congrats!</p>
 </section>
 <section id="insert-some-entities">
@@ -233,6 +234,7 @@
 <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
 <script src="_static/doctools.js"></script>
 <script src="_static/sphinx_highlight.js"></script>
+<script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
 <script src="_static/theme.3051a0ec24cad00d4d88.js"></script>
 </body>
 </html>

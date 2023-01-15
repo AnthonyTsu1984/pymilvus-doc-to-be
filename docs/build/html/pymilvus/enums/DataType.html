@@ -9,6 +9,7 @@
 <title>DataType() | PyMilvus 2.3.0 documentation</title>
 <link href="../../_static/pygments.css" rel="stylesheet"/>
 <link href="../../_static/theme.9297a650d9dd3016d913.css" rel="stylesheet"/>
+<link href="../../_static/custom.css" rel="stylesheet"/>
 <link href="../../search.html" rel="search" title="Search"/>
 <link href="../../genindex.html" rel="index" title="Index"/>
 <link href="../../changelog.html" rel="next" title="Changelogs"/>
@@ -39,6 +40,8 @@
 <li class="toctree-l2"><div class="nav-link"><a class="reference internal" data-action="click-&gt;sidebar#close" href="../../tutorial.html#connect-to-your-milvus-database">Connect to Your Milvus Database</a></div></li>
 <li class="toctree-l2"><div class="nav-link"><a class="reference internal" data-action="click-&gt;sidebar#close" href="../../tutorial.html#create-a-schema">Create a Schema</a></div></li>
 <li class="toctree-l2"><div class="nav-link"><a class="reference internal" data-action="click-&gt;sidebar#close" href="../../tutorial.html#create-a-collection">Create a Collection</a></div></li>
+<li class="toctree-l2"><div class="nav-link"><a class="reference internal" data-action="click-&gt;sidebar#close" href="../../tutorial.html#create-an-index">Create an Index</a></div></li>
+<li class="toctree-l2"><div class="nav-link"><a class="reference internal" data-action="click-&gt;sidebar#close" href="../../tutorial.html#insert-some-entities">Insert Some Entities</a></div></li>
 </ul>
 </li>
 <li class="toctree-l1 current expanded"><div class="nav-link"><svg class="expand" data-action="click-&gt;sidebar#expand keydown-&gt;sidebar#expandKeyPressed" tabindex="0" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg><a class="reference internal" data-action="click-&gt;sidebar#close" href="../index.html">API Reference</a></div><ul class="current">
@@ -105,61 +108,61 @@
 </nav>
 <article class="flex-1" role="main">
 <section id="datatype">
-<h1><code class="xref py py-enum docutils literal notranslate">DataType()</code><a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#datatype"><span>#</span></a></h1>
+<h1><code class="xref py py-enum docutils literal notranslate">DataType()</code><a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#datatype"><span>#</span></a></h1>
 <dl class="py class enum code-definition">
 <dt class="sig sig-object py" id="pymilvus.DataType">
-<em class="property">enum<span class="w"> </span></em><code class="sig-prename descclassname">pymilvus.</code><code class="sig-name descname">DataType</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#pymilvus.DataType"><span>#</span></a></dt>
+<em class="property">enum<span class="w"> </span></em><code class="sig-prename descclassname">pymilvus.</code><code class="sig-name descname">DataType</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#pymilvus.DataType"><span>#</span></a></dt>
 <dd>
 <p>Enumerates all applicable data types in Milvus.</p>
 <p>Valid values are as follows:</p>
 <dl class="py attribute code-definition">
 <dt class="sig sig-object py" id="pymilvus.DataType.BOOL">
-<code class="sig-name descname">BOOL</code><em class="property"><span class="w"> </span><span class="p">=</span><span class="w"> </span>&lt;DataType.BOOL: 1&gt;</em><a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#pymilvus.DataType.BOOL"><span>#</span></a></dt>
+<code class="sig-name descname">BOOL</code><em class="property"><span class="w"> </span><span class="p">=</span><span class="w"> </span>&lt;DataType.BOOL: 1&gt;</em><a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#pymilvus.DataType.BOOL"><span>#</span></a></dt>
 <dd>
 </dd></dl>
 <dl class="py attribute code-definition">
 <dt class="sig sig-object py" id="pymilvus.DataType.INT8">
-<code class="sig-name descname">INT8</code><em class="property"><span class="w"> </span><span class="p">=</span><span class="w"> </span>&lt;DataType.INT8: 2&gt;</em><a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#pymilvus.DataType.INT8"><span>#</span></a></dt>
+<code class="sig-name descname">INT8</code><em class="property"><span class="w"> </span><span class="p">=</span><span class="w"> </span>&lt;DataType.INT8: 2&gt;</em><a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#pymilvus.DataType.INT8"><span>#</span></a></dt>
 <dd>
 </dd></dl>
 <dl class="py attribute code-definition">
 <dt class="sig sig-object py" id="pymilvus.DataType.INT16">
-<code class="sig-name descname">INT16</code><em class="property"><span class="w"> </span><span class="p">=</span><span class="w"> </span>&lt;DataType.INT16: 3&gt;</em><a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#pymilvus.DataType.INT16"><span>#</span></a></dt>
+<code class="sig-name descname">INT16</code><em class="property"><span class="w"> </span><span class="p">=</span><span class="w"> </span>&lt;DataType.INT16: 3&gt;</em><a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#pymilvus.DataType.INT16"><span>#</span></a></dt>
 <dd>
 </dd></dl>
 <dl class="py attribute code-definition">
 <dt class="sig sig-object py" id="pymilvus.DataType.INT32">
-<code class="sig-name descname">INT32</code><em class="property"><span class="w"> </span><span class="p">=</span><span class="w"> </span>&lt;DataType.INT32: 4&gt;</em><a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#pymilvus.DataType.INT32"><span>#</span></a></dt>
+<code class="sig-name descname">INT32</code><em class="property"><span class="w"> </span><span class="p">=</span><span class="w"> </span>&lt;DataType.INT32: 4&gt;</em><a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#pymilvus.DataType.INT32"><span>#</span></a></dt>
 <dd>
 </dd></dl>
 <dl class="py attribute code-definition">
 <dt class="sig sig-object py" id="pymilvus.DataType.INT64">
-<code class="sig-name descname">INT64</code><em class="property"><span class="w"> </span><span class="p">=</span><span class="w"> </span>&lt;DataType.INT64: 5&gt;</em><a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#pymilvus.DataType.INT64"><span>#</span></a></dt>
+<code class="sig-name descname">INT64</code><em class="property"><span class="w"> </span><span class="p">=</span><span class="w"> </span>&lt;DataType.INT64: 5&gt;</em><a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#pymilvus.DataType.INT64"><span>#</span></a></dt>
 <dd>
 </dd></dl>
 <dl class="py attribute code-definition">
 <dt class="sig sig-object py" id="pymilvus.DataType.FLOAT">
-<code class="sig-name descname">FLOAT</code><em class="property"><span class="w"> </span><span class="p">=</span><span class="w"> </span>&lt;DataType.FLOAT: 6&gt;</em><a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#pymilvus.DataType.FLOAT"><span>#</span></a></dt>
+<code class="sig-name descname">FLOAT</code><em class="property"><span class="w"> </span><span class="p">=</span><span class="w"> </span>&lt;DataType.FLOAT: 6&gt;</em><a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#pymilvus.DataType.FLOAT"><span>#</span></a></dt>
 <dd>
 </dd></dl>
 <dl class="py attribute code-definition">
 <dt class="sig sig-object py" id="pymilvus.DataType.DOUBLE">
-<code class="sig-name descname">DOUBLE</code><em class="property"><span class="w"> </span><span class="p">=</span><span class="w"> </span>&lt;DataType.DOUBLE: 7&gt;</em><a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#pymilvus.DataType.DOUBLE"><span>#</span></a></dt>
+<code class="sig-name descname">DOUBLE</code><em class="property"><span class="w"> </span><span class="p">=</span><span class="w"> </span>&lt;DataType.DOUBLE: 7&gt;</em><a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#pymilvus.DataType.DOUBLE"><span>#</span></a></dt>
 <dd>
 </dd></dl>
 <dl class="py attribute code-definition">
 <dt class="sig sig-object py" id="pymilvus.DataType.VARCHAR">
-<code class="sig-name descname">VARCHAR</code><em class="property"><span class="w"> </span><span class="p">=</span><span class="w"> </span>&lt;DataType.VARCHAR: 8&gt;</em><a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#pymilvus.DataType.VARCHAR"><span>#</span></a></dt>
+<code class="sig-name descname">VARCHAR</code><em class="property"><span class="w"> </span><span class="p">=</span><span class="w"> </span>&lt;DataType.VARCHAR: 8&gt;</em><a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#pymilvus.DataType.VARCHAR"><span>#</span></a></dt>
 <dd>
 </dd></dl>
 <dl class="py attribute code-definition">
 <dt class="sig sig-object py" id="pymilvus.DataType.BINARY_VECTOR">
-<code class="sig-name descname">BINARY_VECTOR</code><em class="property"><span class="w"> </span><span class="p">=</span><span class="w"> </span>&lt;DataType.BINARY_VECTOR: 9&gt;</em><a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#pymilvus.DataType.BINARY_VECTOR"><span>#</span></a></dt>
+<code class="sig-name descname">BINARY_VECTOR</code><em class="property"><span class="w"> </span><span class="p">=</span><span class="w"> </span>&lt;DataType.BINARY_VECTOR: 9&gt;</em><a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#pymilvus.DataType.BINARY_VECTOR"><span>#</span></a></dt>
 <dd>
 </dd></dl>
 <dl class="py attribute code-definition">
 <dt class="sig sig-object py" id="pymilvus.DataType.FLOAT_VECTOR">
-<code class="sig-name descname">FLOAT_VECTOR</code><em class="property"><span class="w"> </span><span class="p">=</span><span class="w"> </span>&lt;DataType.FLOAT_VECTOR: 10&gt;</em><a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#pymilvus.DataType.FLOAT_VECTOR"><span>#</span></a></dt>
+<code class="sig-name descname">FLOAT_VECTOR</code><em class="property"><span class="w"> </span><span class="p">=</span><span class="w"> </span>&lt;DataType.FLOAT_VECTOR: 10&gt;</em><a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#pymilvus.DataType.FLOAT_VECTOR"><span>#</span></a></dt>
 <dd>
 </dd></dl>
 </dd></dl>
@@ -179,6 +182,7 @@
 <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
 <script src="../../_static/doctools.js"></script>
 <script src="../../_static/sphinx_highlight.js"></script>
+<script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
 <script src="../../_static/theme.3051a0ec24cad00d4d88.js"></script>
 </body>
 </html>
