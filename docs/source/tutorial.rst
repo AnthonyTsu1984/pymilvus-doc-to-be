@@ -103,10 +103,34 @@ Now, we'll create an index for the vector field :code:`title_vector` in the coll
 
 In the above snippet, we have set :code:`index_type` to :code:`IVF_FLAT` and :code:`metric_type` to :code:`IP`. There are also other index types and metric types. For details, see `In-memory Index <https://milvus.io/docs/index.md>`_ and `On-disk Index <https://milvus.io/docs/disk_index.md>`_.
 
-Running :doc:`pymilvus/create_index` lasts for a little while, no matter what index type is in use. Just take a sip of coffee if it is by your hands and wait for the index to be created.
+Running :doc:`pymilvus/create_index` lasts for a little while no matter what index type is in use. Just take a sip of coffee if it is by your hands and wait for the index to be created.
 
 Till now, a brand new collection is ready for data input. Congrats!
 
 Insert Some Entities
 --------------------
+
+In PyMilvus, you can either use :doc:`pymilvus/insert` to insert data records one after another or use :doc:`pymilvus/bulk_insert` to insert the whole dataset at a time.
+
+Based on the schema created in a previous step, you can download the corresponding dataset `here <#>`_, which is a row-based JSON file.
+
+Insert data records one by one
+******************************
+
+To insert data records one after another, you have to process the dataset for a little bit.
+
+    >>> import pandas as pd
+    >>> df = pd.read_json("medium_2020_dataset.json")
+    >>> data = []
+    >>> keys = df['rows'][0].keys()
+    >>> for key in keys:
+    >>>     data.append([ row.get(key) for row in df['rows'] ])
+    >>> pymilvus.insert("medium_2020_dataset", data)
+
+In the above snippet, we read the JSON file into memory and strip off the keys in each record to convert the dataset into a list of value lists. Then use :doc:`pymilvus/insert` to add the list into the collection.
+
+Since the :doc:`pymilvus/insert` function uses a loop to insert the members of the input list and may be time-consuming if the list contains abundant high-dimensional members. You are advised to split your dataset into smaller chunks to prevent the insert process from lasting for a long time.
+
+Insert the whole dataset at a time
+**********************************
 
