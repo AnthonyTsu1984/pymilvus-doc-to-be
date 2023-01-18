@@ -29,7 +29,7 @@ Functions
     describe_index
     drop_index
 
-.. rubric:: Insert & Delete
+.. rubric:: DML Operations
 
 .. toctree::
     :maxdepth: 1

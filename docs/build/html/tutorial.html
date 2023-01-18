@@ -110,10 +110,10 @@
 </nav>
 <article class="flex-1" role="main">
 <section id="tutorial">
-<h1>Tutorial<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#tutorial"><span>#</span></a></h1>
+<h1>Tutorial<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#tutorial"><span>#</span></a></h1>
 <p>This tutorial guides you through how to work with Milvus and PyMilvus.</p>
 <section id="prerequisites">
-<h2>Prerequisites<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#prerequisites"><span>#</span></a></h2>
+<h2>Prerequisites<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#prerequisites"><span>#</span></a></h2>
 <p>Before we start, ensure that you have a PyMilvus distribution <a class="reference internal" href="index.html#installation"><span class="std std-ref">installed</span></a>. You can verify this by running the following in the Python shell without any prompted errors.</p>
 <div class="code-wrapper" data-controller="code">
 <div class="code-header">
@@ -123,7 +123,7 @@
 <p>This tutorial also assumes that a Milvus instance is running on <code class="code docutils literal notranslate">localhost:19530</code>. To install Milvus, refer to <a class="reference external" href="https://milvus.io/docs/install_standalone-operator.md" rel="nofollow noopener">Install Milvus Standalone<svg aria-hidden="true" class="external-link-icon" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></a> and <a class="reference external" href="https://milvus.io/docs/install_cluster-milvusoperator.md" rel="nofollow noopener">Install Milvus Cluster<svg aria-hidden="true" class="external-link-icon" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></a> for details.</p>
 </section>
 <section id="connect-to-your-milvus-database">
-<h2>Connect to Your Milvus Database<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#connect-to-your-milvus-database"><span>#</span></a></h2>
+<h2>Connect to Your Milvus Database<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#connect-to-your-milvus-database"><span>#</span></a></h2>
 <p>After you install a Milvus database, you can connect to it as follows:</p>
 <div class="code-wrapper" data-controller="code">
 <div class="code-header">
@@ -151,7 +151,7 @@
 </code></pre></div></div>
 </section>
 <section id="create-a-schema">
-<h2>Create a Schema<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#create-a-schema"><span>#</span></a></h2>
+<h2>Create a Schema<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#create-a-schema"><span>#</span></a></h2>
 <p>In a running Milvus instance, you can create multiple independent collections, each of which has its own data structure. In Milvus, we address the data structure of a collection <strong>schema</strong>, and data records in the collection <strong>entities</strong>.</p>
 <p>You should create a schema before creating a collection and doing this is not a big deal:</p>
 <div class="code-wrapper" data-controller="code">
@@ -178,7 +178,7 @@
 </code></pre></div></div>
 </section>
 <section id="create-a-collection">
-<h2>Create a Collection<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#create-a-collection"><span>#</span></a></h2>
+<h2>Create a Collection<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#create-a-collection"><span>#</span></a></h2>
 <p>After the schema is ready, you can reference it while creating a collection:</p>
 <div class="code-wrapper" data-controller="code">
 <div class="code-header">
@@ -201,7 +201,7 @@
 <p>Otherwise, you will see a traceback information instead.</p>
 </section>
 <section id="create-an-index">
-<h2>Create an Index<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#create-an-index"><span>#</span></a></h2>
+<h2>Create an Index<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#create-an-index"><span>#</span></a></h2>
 <p>All Approximate Nearest Neighbor (ANN) searches in Milvus rely on indexes for extremely high performance. Before any ANN searches, you have to create indexes on the vector field in your collection.</p>
 <p>Now, we’ll create an index for the vector field <code class="code docutils literal notranslate">title_vector</code> in the collection just created.</p>
 <div class="code-wrapper" data-controller="code">
@@ -220,11 +220,11 @@
 <p>Till now, a brand new collection is ready for data input. Congrats!</p>
 </section>
 <section id="insert-some-entities">
-<h2>Insert Some Entities<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#insert-some-entities"><span>#</span></a></h2>
+<h2>Insert Some Entities<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#insert-some-entities"><span>#</span></a></h2>
 <p>In PyMilvus, you can either use <a class="reference internal" href="pymilvus/insert.html"><span class="doc">insert()</span></a> to insert data records one after another or use <a class="reference internal" href="pymilvus/bulk_insert.html"><span class="doc">bulk_insert()</span></a> to insert the whole dataset at a time.</p>
 <p>Based on the schema created in a previous step, you can download the corresponding dataset <a class="reference external" href="#" rel="nofollow noopener">here<svg aria-hidden="true" class="external-link-icon" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></a>, which is a row-based JSON file.</p>
 <section id="insert-data-records-one-by-one">
-<h3>Insert data records one by one<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#insert-data-records-one-by-one"><span>#</span></a></h3>
+<h3>Insert data records one by one<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#insert-data-records-one-by-one"><span>#</span></a></h3>
 <p>To insert data records one after another, you have to process the dataset for a little bit.</p>
 <div class="code-wrapper" data-controller="code">
 <div class="code-header">
@@ -241,7 +241,7 @@
 <p>Since the <a class="reference internal" href="pymilvus/insert.html"><span class="doc">insert()</span></a> function uses a loop to insert the members of the input list and may be time-consuming if the list contains abundant high-dimensional members. You are advised to split your dataset into smaller chunks to prevent the insert process from lasting for a long time.</p>
 </section>
 <section id="insert-the-whole-dataset-at-a-time">
-<h3>Insert the whole dataset at a time<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#insert-the-whole-dataset-at-a-time"><span>#</span></a></h3>
+<h3>Insert the whole dataset at a time<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#insert-the-whole-dataset-at-a-time"><span>#</span></a></h3>
 </section>
 </section>
 </section>
