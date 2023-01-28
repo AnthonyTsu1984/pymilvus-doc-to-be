@@ -28,6 +28,8 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
       - name: Sphinx Build
         uses: ammaraskar/sphinx-action@0.4
         with:
@@ -35,8 +37,6 @@ jobs:
           docs-folder: ./docs/
           # The command used to build your documentation.
           build-command: make html
-      - name: Checkout
-        uses: actions/checkout@v3
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Upload artifact
