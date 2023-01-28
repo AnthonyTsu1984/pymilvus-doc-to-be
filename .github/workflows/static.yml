@@ -30,5 +30,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Sphinx Build (composite)
-        uses: rickstaa/action-sphinx-composite@v1.0.0
+      - name: Sphinx Build
+        uses: ammaraskar/sphinx-action@0.4
+        with:
+          # The command used to build your documentation.
+          build-command: sphinx-build source build
