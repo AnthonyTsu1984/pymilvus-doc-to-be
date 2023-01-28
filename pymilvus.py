@@ -378,9 +378,9 @@ def create_index(collection_name, field_name, index_name, index_params, **kwargs
     """
     Creates an index on the specified field in a collection.
 
-    :param collection: Specifies a collection desired for the collection.
+    :param collection: Specifies a collection desired for the operation.
 
-        A collection collection should be a string of 1 to 255 characters, starting with a letter or an underscore (_) and containing only numbers, letters, and underscores (_).
+        A collection name should be a string of 1 to 255 characters, starting with a letter or an underscore (_) and containing only numbers, letters, and underscores (_).
     :type collection: str
     :param field_name: Specifies the name of the field on which the index is to be created.
 
@@ -874,7 +874,7 @@ def bulk_insert(collection_name, file, **kwargs):
                 ]
             }
     :type files: list[str] 
-    :param partition_name: (Optional) Specifies the name of the target collection.
+    :param partition_name: (Optional) Specifies the name of the target partition. If omitted, an arbitrary partition is selected.
 
         A partition name should be a string of 1 to 255 characters, starting with a letter or an underscore (_) and containing only numbers, letters, and underscores (_). The default value is :code:`None`.
     :type partition_name: str or None  
