@@ -15,4 +15,5 @@ section>section {
     margin-top: 0.2rem !important;
     margin-bottom: 0.2rem !important;
     padding-top: 0.2rem !important;
+    border-top-width: 0px !important;
 }

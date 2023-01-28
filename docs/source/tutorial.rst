@@ -3,10 +3,33 @@ Tutorial
 
 This tutorial guides you through how to work with Milvus and PyMilvus.
 
+Installation
+------------
+
+You must install the PyMilvus SDK to make it available for your Python applications. We recommend using `pip <https://pypi.org/project/pymilvus/>`_ to install PyMilvus.
+
+The following command demonstrates how you can install the latest version of the module.
+
+.. code-block:: shell
+
+   python -m pip install pymilvus
+
+To install a specific version of PyMilvus, do as follows:
+
+.. code-block:: shell
+
+   python -m pip install pymilvus=2.2.1
+
+To upgrade your PyMilvus installation to the latest version, do as follows:
+
+.. code-block:: shell
+
+   python -m pip install --upgrade pymilvus
+
 Prerequisites
 -------------
 
-Before we start, ensure that you have a PyMilvus distribution :ref:`installed<Installation>`. You can verify this by running the following in the Python shell without any prompted errors.
+After you have installed PyMilvus, verify it by running the following in the Python shell. It should not prompt any errors.
 
     >>> import pymilvus
 

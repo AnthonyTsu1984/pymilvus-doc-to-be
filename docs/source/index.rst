@@ -9,11 +9,21 @@ PyMilvus
 Introduction
 ------------
 
-Welcome to the documentation site for PyMilvus, the official Milvus SDK for python applications. Download it using `pip <https://pypi.org/project/pymilvus/>`_ or set up a runnable project by following our tutorial.
+Welcome to the documentation site for PyMilvus, the official Milvus SDK for python applications. Download it using `pip <https://pypi.org/project/pymilvus/>`_ or set up a runnable project by following the tutorial.
+
+.. rubric:: Let's enjoy!
+
+.. toctree::
+   :maxdepth: 1
+
+   tutorial
+   pymilvus/index
+   changelog
 
 
-Compatibility
-*************
+For its compatibility with Milvus versions, refer to the following table.
+
+.. rubric:: Compatibility
 
 .. list-table::
    :header-rows: 1
@@ -32,36 +42,3 @@ Compatibility
    * - 2.2.x
      - 2.2.1 (latest)
 
-Installation
-------------
-
-You must install the PyMilvus SDK to make it available for your Python applications. We recommend using `pip <https://pypi.org/project/pymilvus/>`_ to install PyMilvus.
-
-The following command demonstrates how you can install the latest version of the module.
-
-.. code-block:: shell
-
-   python -m pip install pymilvus
-
-To install a specific version of PyMilvus, do as follows:
-
-.. code-block:: shell
-
-   python -m pip install pymilvus=2.2.1
-
-To upgrade your PyMilvus installation to the latest version, do as follows:
-
-.. code-block:: shell
-
-   python -m pip install --upgrade pymilvus
-
-
-Let's enjoy!
-------------
-
-.. toctree::
-   :maxdepth: 1
-
-   tutorial
-   pymilvus/index
-   changelog
