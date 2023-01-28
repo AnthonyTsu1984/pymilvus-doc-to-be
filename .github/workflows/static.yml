@@ -34,4 +34,5 @@ jobs:
         uses: ammaraskar/sphinx-action@0.4
         with:
           # The command used to build your documentation.
-          build-command: sphinx-build source build
+          build-command: make html
+          pre-build-command: touch /tmp/sphinx-log
