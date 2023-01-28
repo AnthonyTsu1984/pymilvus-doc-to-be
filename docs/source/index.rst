@@ -20,10 +20,9 @@ Welcome to the documentation site for PyMilvus, the official Milvus SDK for pyth
    pymilvus/index
    changelog
 
+.. rubric:: Compatibility
 
 For its compatibility with Milvus versions, refer to the following table.
-
-.. rubric:: Compatibility
 
 .. list-table::
    :header-rows: 1
