@@ -36,6 +36,8 @@ jobs:
           docs-folder: docs/
           build-command: make html
           pre-build-command: python -m pip install enum-tools[sphinx]
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v3.0.0
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
