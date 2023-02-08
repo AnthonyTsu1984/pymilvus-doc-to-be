@@ -277,7 +277,7 @@ def has_collection(collection_name):
     """
     pass
 
-def create_alias(self, collection_name, alias, **kwargs):
+def create_alias(collection_name, alias, **kwargs):
     """
     Creates an alias for a collection.
 
@@ -303,7 +303,7 @@ def create_alias(self, collection_name, alias, **kwargs):
     """
     pass
 
-def alter_alias(self, collection_name, alias, **kwargs):
+def alter_alias(collection_name, alias, **kwargs):
     """
     Changes an alias for a collection.
 
