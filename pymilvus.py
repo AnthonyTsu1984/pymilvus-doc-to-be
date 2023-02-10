@@ -48,7 +48,7 @@ def create_collection(name, schema, num_shards=2, **kwargs):
     :param timeout: (Optional) Specifies the timeout duration of this operation in milliseconds.
 
         The value defaults to None, indicating that no such limit applies.
-    :type timeout: int
+    :type timeout: double or None
     :raises:
     :returns: No returns, indicating that this operation succeeds.
     :rtype: :code:`None`
@@ -105,7 +105,7 @@ def describe_collection(collection_name, **kwargs):
     :param timeout: (Optional) Specifies the timeout duration of this operation.
 
         The value defaults to :code:`None`, indicating that no such limit applies.
-    :type timeout: int or None
+    :type timeout: double or None
     :raises:
     :returns: A list of immutable attributes of the collection.
     :rtypes: dict
@@ -145,7 +145,7 @@ def load_collection(collection_name, **kwargs):
     :param timeout: (Optional) Specifies the timeout duration of this operation.
 
         The value defaults to :code:`None`, indicating that no such limit applies.
-    :type timeout: int or None
+    :type timeout: double or None
     :raises:
     :returns: A collection-loading task
     :rtype: :class:`Task`
@@ -168,7 +168,7 @@ def release_collection(collection_name, **kwargs):
     :param timeout: (Optional) Specifies the timeout duration of this operation.
 
         The value defaults to :code:`None`, indicating that no such limit applies.
-    :type timeout: int or None
+    :type timeout: double or None
     :raises:
     :return: No returns, indicating that this operation succeeds.
     :rtype: :code:`None`
@@ -191,7 +191,7 @@ def drop_collection(collection_name, **kwargs):
     :param timeout: (Optional) Specifies the timeout duration of this operation.
 
         The value defaults to :code:`None`, indicating that no such limit applies.
-    :type timeout: int or None
+    :type timeout: double or None
     :raises:
     :return: A collection-drop task
     :rtype: :class:`Task`
@@ -213,7 +213,7 @@ def get_collection_statistics(collection_name, **kwargs):
     :param timeout: (Optional) Specifies the timeout duration of this operation.
 
         The value defaults to :code:`None`, indicating that no such limit applies.
-    :type timeout: int or None
+    :type timeout: double or None
     :raises:    
     :returns: All statistical items of the collection
     :rtype: dict
@@ -246,7 +246,7 @@ def list_collections(**kwargs):
     :param timeout: (Optional) Specifies the timeout duration of this operation.
 
         The value defaults to :code:`None`, indicating that no such limit applies.
-    :type timeout: int or None
+    :type timeout: double or None
     :raises:    
     :returns: A list of collection names
     :rtype: list[str]    
@@ -292,7 +292,7 @@ def create_alias(collection_name, alias, **kwargs):
     :param timeout: (Optional) Specifies the timeout duration of this operation.
 
         The default value is :code:`None`, indicating that no such limit applies.
-    :type timeout: int
+    :type timeout: double or None
     :raises:
     :returns: No returns, indicating that this operation succeeds.
     :rtype: :code:`None`
@@ -318,7 +318,7 @@ def alter_alias(collection_name, alias, **kwargs):
     :param timeout: (Optional) Specifies the timeout duration of this operation.
 
         The default value is :code:`None`, indicating that no such limit applies.
-    :type timeout: int
+    :type timeout: double or None
     :raises:
     :returns: No returns, indicating that this operation succeeds.
     :rtype: :code:`None`
@@ -340,7 +340,7 @@ def list_aliases(collection_name, **kwargs):
     :param timeout: (Optional) Specifies the timeout duration of this operation.
 
         The default value is :code:`None`, indicating that no such limit applies.
-    :type timeout: int
+    :type timeout: double or None
     :raises:    
     :returns: A list of aliases associated with a collection.
     :rtype: list[str]
@@ -363,7 +363,7 @@ def drop_alias(alias, **kwargs):
     :param timeout: (Optional) Specifies the timeout duration of this operation.
 
         The default value is :code:`None`, indicating that no such limit applies.
-    :type timeout: int
+    :type timeout: double or None
     :raises:
     :returns: No returns, indicating that this operation succeeds.
     :rtype: :code:`None`
@@ -414,7 +414,7 @@ def create_index(collection_name, field_name, index_name, index_params, **kwargs
     :param timeout: (Optional) Specifies the timeout duration of this operation.
 
         The default value is :code:`None`, indicating that no such limit applies.
-    :type timeout: int
+    :type timeout: double or None
     :raises:
     :returns: An index-creating task
     :rtype: :class:`Task` 
@@ -447,7 +447,7 @@ def describe_index(collection_name, index_name, **kwargs):
     :param timeout: (Optional) Specifies the timeout duration of this operation.
 
         The default value is :code:`None`, indicating that no such limit applies.
-    :type timeout: int
+    :type timeout: double or None
     :raises:
     :returns: A list of immutable attributes of the index.
     :rtype: dict  
@@ -481,7 +481,7 @@ def drop_index(collection_name, index_name, **kwargs):
     :param timeout: (Optional) Specifies the timeout duration of this operation.
 
         The default value is :code:`None`, indicating that no such limit applies.
-    :type timeout: int  
+    :type timeout: double or None  
 
     :raises: 
     :returns: An index-drop task
@@ -504,7 +504,7 @@ def create_partition(collection_name, partition_name, **kwargs):
     :param timeout: (Optional) Specifies the timeout duration of this operation.
 
         The default value is :code:`None`, indicating that no such limit applies.
-    :type timeout: int  
+    :type timeout: double or None
     :raises:
     :returns: No returns, indicating that this operation succeeds. 
     :rtype: :code:`None`
@@ -530,7 +530,7 @@ def describe_partition(collection_name, partition_name, **kwargs):
     :param timeout: (Optional) Specifies the timeout duration of this operation.
 
         The default value is :code:`None`, indicating that no such limit applies.
-    :type timeout: int  
+    :type timeout: double or None
     :raises:
     :returns: A list of immutable attributes of the partition 
     :rtype: dict
@@ -567,7 +567,7 @@ def load_partition(collection_name, partition_names, **kwargs):
     :param timeout: (Optional) Specifies the timeout duration of this operation.
 
         The default value is :code:`None`, indicating that no such limit applies.
-    :type timeout: int  
+    :type timeout: double or None  
     :raises:
     :returns: A partition-loading task 
     :rtype: :class:`Task`
@@ -594,7 +594,7 @@ def release_partition(collection_name, partition_names, **kwargs):
     :param timeout: (Optional) Specifies the timeout duration of this operation.
 
         The default value is :code:`None`, indicating that no such limit applies.
-    :type timeout: int  
+    :type timeout: double or None  
     :raises:
     :returns: No returns, indicating that this operation succeeds.
     :rtype: :code:`None`  
@@ -621,7 +621,7 @@ def drop_partition(collection_name, partition_name, **kwargs):
     :param timeout: (Optional) Specifies the timeout duration of this operation.
 
         The default value is :code:`None`, indicating that no such limit applies.
-    :type timeout: int  
+    :type timeout: double or None  
     :raises:
     :returns: No returns, indicating that this operation succeeds.
     :rtype: :code:`None`  
@@ -647,7 +647,7 @@ def get_partition_statistics(collection_name, partition_names, **kwargs):
     :param timeout: (Optional) Specifies the timeout duration of this operation.
 
         The default value is :code:`None`, indicating that no such limit applies.
-    :type timeout: int  
+    :type timeout: double or None 
     :raises: 
     :return: All statistical items of the specified partitions.
     :rtype: dict
@@ -671,7 +671,7 @@ def list_partitions(collection_name, **kwargs):
     :param timeout: (Optional) Specifies the timeout duration of this operation.
 
         The default value is :code:`None`, indicating that no such limit applies.
-    :type timeout: int  
+    :type timeout: double or None
     :raises: 
     :return: Names of all partitions in the collection
     :rtype: list[str]   
@@ -698,7 +698,7 @@ def has_partition(collection_name, partition_name, **kwargs):
     :param timeout: (Optional) Specifies the timeout duration of this operation.
 
         The default value is :code:`None`, indicating that no such limit applies.
-    :type timeout: int
+    :type timeout: double or None
     :raises:
     :returns: A boolean value indicating whether the partition exists.
     :rtype: bool
@@ -811,7 +811,7 @@ def insert(collection_name, **kwargs):
     :param timeout: (Optional) Specifies the timeout duration of this operation.
 
         The default value is :code:`None`, indicating that no such limit applies.
-    :type timeout: int
+    :type timeout: double or None
     :raises:
     :returns: No returns, indicating that this operation succeeds.
     :rtype: :code:`None`
@@ -881,7 +881,7 @@ def bulk_insert(collection_name, file, **kwargs):
     :param timeout: (Optional) Specifies the timeout duration of this operation.
 
         The default value is :code:`None`, indicating that no such limit applies.
-    :type timeout: int 
+    :type timeout: double or None 
     :raises:
     :return: A handler of the bulk-insert task.
     :rtype: :class:`Task` 
@@ -909,7 +909,7 @@ def list_bulk_insert_tasks(**kwargs):
     :param timeout: (Optional) Specifies the timeout duration of this operation.
 
         The default value is :code:`None`, indicating that no such limit applies.
-    :type timeout: int 
+    :type timeout: double or None 
     :raises:
     :returns: A list of bulk-insert task IDs.
     :rtype: list[str]
@@ -933,7 +933,7 @@ def get_bulk_insert_state(task_id, **kwargs):
     :param timeout: (Optional) Specifies the timeout duration of this operation.
 
         The default value is :code:`None`, indicating that no such limit applies.
-    :type timeout: int 
+    :type timeout: double or None 
     :raises:
     :returns: State of the specified task.
     :rtype: dict
@@ -958,7 +958,7 @@ def flush(collection_name, **kwargs):
     :param timeout: (Optional) Specifies the timeout duration of this operation.
 
         The default value is :code:`None`, indicating that no such limit applies.
-    :type timeout: int 
+    :type timeout: double or None 
     :raises:
     :returns: No returns, indicating that this operation succeeds.
     :rtype: :code:`None`
@@ -994,7 +994,7 @@ def delete_by_expr(collection_name, **kwargs):
     :param timeout: (Optional) Specifies the timeout duration of this operation.
 
         The default value is :code:`None`, indicating that no such limit applies.
-    :type timeout: int 
+    :type timeout: double or None 
     :raises:
     :returns: An entity-deleting task
     :rtype: :class:`Task`
@@ -1020,7 +1020,7 @@ def delete(collection_name, primary_keys, **kwargs):
     :param timeout: (Optional) Specifies the timeout duration of this operation.
 
         The default value is :code:`None`, indicating that no such limit applies.
-    :type timeout: int 
+    :type timeout: double or None 
     :raises:
     :returns: An entity-deleting task
     :rtype: :class:`Task`
