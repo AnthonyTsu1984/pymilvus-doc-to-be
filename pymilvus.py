@@ -387,8 +387,8 @@ def describe_alias(alias, **kwargs):
         The default value is :code:`None`, indicating that no such limit applies.
     :type timeout: double or None
     :raises:
-    :returns: A dictionary containing alias details.
-    :rtype: dict   
+    :returns: An :code:`AliasInfo` object lists the alias details
+    :rtype: :code:`AliasInfo`   
     """
     pass
 
