@@ -63,6 +63,8 @@ Functions
 
     create_alias
     alter_alias
+    describe_alias
+    has_alias
     list_aliases
     drop_alias
 

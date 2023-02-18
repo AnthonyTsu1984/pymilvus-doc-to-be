@@ -277,18 +277,18 @@ def has_collection(collection_name):
     """
     pass
 
-def create_alias(collection_name, alias, **kwargs):
+def create_alias(alias, collection_name, **kwargs):
     """
     Creates an alias for a collection.
 
-    :param collection_name: Specifies the name of a target collection.
-
-        A collection name should be a string of 1 to 255 characters, starting with a letter or an underscore (_) and containing only numbers, letters, and underscores (_).
-    :type collection_name: str
     :param alias: Specifies an alias desired for the collection.
 
         A collection alias should be a string of 1 to 255 characters, starting with a letter or an underscore (_) and containing only numbers, letters, and underscores (_).
     :type alias: str
+    :param collection_name: Specifies the name of a target collection.
+
+        A collection name should be a string of 1 to 255 characters, starting with a letter or an underscore (_) and containing only numbers, letters, and underscores (_).
+    :type collection_name: str
     :param timeout: (Optional) Specifies the timeout duration of this operation.
 
         The default value is :code:`None`, indicating that no such limit applies.
@@ -303,18 +303,18 @@ def create_alias(collection_name, alias, **kwargs):
     """
     pass
 
-def alter_alias(collection_name, alias, **kwargs):
+def alter_alias(alias, collection_name, **kwargs):
     """
     Changes an alias for a collection.
 
-    :param collection_name: Specifies the name of a target collection.
-
-        A collection name should be a string of 1 to 255 characters, starting with a letter or an underscore (_) and containing only numbers, letters, and underscores (_).
-    :type collection_name: str
     :param alias: Specifies an alias desired for the collection.
 
         A collection alias should be a string of 1 to 255 characters, starting with a letter or an underscore (_) and containing only numbers, letters, and underscores (_).
     :type alias: str
+    :param collection_name: Specifies the name of a target collection.
+
+        A collection name should be a string of 1 to 255 characters, starting with a letter or an underscore (_) and containing only numbers, letters, and underscores (_).
+    :type collection_name: str
     :param timeout: (Optional) Specifies the timeout duration of this operation.
 
         The default value is :code:`None`, indicating that no such limit applies.
@@ -372,6 +372,42 @@ def drop_alias(alias, **kwargs):
     >>> pymilvus.connect(ip_addr, port)
     >>> pymilvus.drop_alias("medium_2020_dataset", "articles")      
     """
+    pass
+
+def describe_alias(alias, **kwargs):
+    """
+    Describes a specified alias.
+
+    :param alias: Specifies an alias desired for the collection.
+
+        A collection alias should be a string of 1 to 255 characters, starting with a letter or an underscore (_) and containing only numbers, letters, and underscores (_).
+    :type alias: str 
+    :param timeout: (Optional) Specifies the timeout duration of this operation.
+
+        The default value is :code:`None`, indicating that no such limit applies.
+    :type timeout: double or None
+    :raises:
+    :returns: A dictionary containing alias details.
+    :rtype: dict   
+    """
+    pass
+
+def has_alias(alias, **kwargs):
+    """
+    Checks whether the specified alias exists.
+
+    :param alias: Specifies an alias desired for the collection.
+
+        A collection alias should be a string of 1 to 255 characters, starting with a letter or an underscore (_) and containing only numbers, letters, and underscores (_).
+    :type alias: str 
+    :param timeout: (Optional) Specifies the timeout duration of this operation.
+
+        The default value is :code:`None`, indicating that no such limit applies.
+    :type timeout: double or None
+    :raises:
+    :returns: A boolean value indicating whether the specified alias exists
+    :rtype: bool
+    """ 
     pass
 
 def create_index(collection_name, field_name, index_name, index_params, **kwargs):
