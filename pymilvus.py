@@ -258,7 +258,7 @@ def list_collections(**kwargs):
     """
     pass
 
-def has_collection(name):
+def has_collection(name, **kwargs):
     """
     Shows whether a collection after the specified name exists.
 
@@ -266,6 +266,10 @@ def has_collection(name):
 
         A collection name should be a string of 1 to 255 characters, starting with a letter or an underscore (_) and containing only numbers, letters, and underscores (_).
     :type name: str 
+    :param timeout: (Optional) Specifies the timeout duration of this operation.
+
+        The value defaults to :code:`None`, indicating that no such limit applies.
+    :type timeout: double or None
     :raises:
     :return: A boolean value indicating whether the collection exists.
     :rtype: bool
