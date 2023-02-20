@@ -1,7 +1,7 @@
 from enum import Enum
 
-
-def create_collection(name, schema, num_shards=2, **kwargs):
+# collection
+def create_collection(name, schema, **kwargs):
     """
     Creates a collection with a pre-defined schema.
 
@@ -94,21 +94,21 @@ def create_schema():
     """
     pass
 
-def describe_collection(collection_name, **kwargs):
+def describe_collection(name, **kwargs):
     """
     Describes the detail of a collection.
 
-    :param collection_name: Specifies the name of the collection in concern.
+    :param name: Specifies the name of the collection in concern.
 
         A collection name should be a string of 1 to 255 characters, starting with a letter or an underscore (_) and containing only numbers, letters, and underscores (_).
-    :type collection_name: str
+    :type name: str
     :param timeout: (Optional) Specifies the timeout duration of this operation.
 
         The value defaults to :code:`None`, indicating that no such limit applies.
     :type timeout: double or None
     :raises:
-    :returns: A list of immutable attributes of the collection.
-    :rtypes: dict
+    :returns: A :code:`CollectionInfo` object lists the collection details
+    :rtypes: :code:`CollectionInfo`
 
     >>> import pymilvus
     >>> pymilvus.connect(ip_addr, port)
@@ -130,14 +130,14 @@ def describe_collection(collection_name, **kwargs):
     """
     pass
 
-def load_collection(collection_name, **kwargs):
+def load_collection(name, **kwargs):
     """
     Loads a collection to make it prepared for searches and queries.
 
-    :param collection_name: Specifies the name of the target collection.
+    :param name: Specifies the name of the target collection.
 
         A collection name should be a string of 1 to 255 characters, starting with a letter or an underscore (_) and containing only numbers, letters, and underscores (_).
-    :type collection_name: 
+    :type name: 
     :param num_replicas: (Optional) Specifies the number of replicas to load.
 
         The value is an integer no greater than xx and defaults to 1, indicating that only one replica is loaded.
@@ -157,14 +157,14 @@ def load_collection(collection_name, **kwargs):
     """
     pass
 
-def release_collection(collection_name, **kwargs):
+def release_collection(name, **kwargs):
     """
     Releases the loaded collection from memory. All data in the released collection remains intact after this operation. You can load the collection to memory again using :func:`load_collection`. 
 
-    :param collection_name: Specifies the name of the collection in concern.
+    :param name: Specifies the name of the collection in concern.
 
         A collection name should be a string of 1 to 255 characters, starting with a letter or an underscore (_) and containing only numbers, letters, and underscores (_).
-    :type collection_name: str
+    :type name: str
     :param timeout: (Optional) Specifies the timeout duration of this operation.
 
         The value defaults to :code:`None`, indicating that no such limit applies.
@@ -180,21 +180,21 @@ def release_collection(collection_name, **kwargs):
     """
     pass
 
-def drop_collection(collection_name, **kwargs):
+def drop_collection(name, **kwargs):
     """
     Drops a collection with all the entities it contains.
 
-    :param collection_name: Specifies the name of the collection in concern.
+    :param name: Specifies the name of the collection in concern.
 
         A collection name should be a string of 1 to 255 characters, starting with a letter or an underscore (_) and containing only numbers, letters, and underscores (_).
-    :type collection_name: str
+    :type name: str
     :param timeout: (Optional) Specifies the timeout duration of this operation.
 
         The value defaults to :code:`None`, indicating that no such limit applies.
     :type timeout: double or None
     :raises:
-    :return: A collection-drop task
-    :rtype: :class:`Task`
+    :return: No returns, indicating that this operation succeeds.
+    :rtype: :class:`None`
 
     >>> import pymilvus
     >>> pymilvus.connect(ip_addr, port)
@@ -202,14 +202,14 @@ def drop_collection(collection_name, **kwargs):
     """
     pass
 
-def get_collection_statistics(collection_name, **kwargs):
+def get_collection_statistics(name, **kwargs):
     """
     Lists the statistical items of a collection.
 
-    :param collection_name: Specifies the name of the collection in concern.
+    :param name: Specifies the name of the collection in concern.
 
         A collection name should be a string of 1 to 255 characters, starting with a letter or an underscore (_) and containing only numbers, letters, and underscores (_).
-    :type collection_name: str
+    :type name: str
     :param timeout: (Optional) Specifies the timeout duration of this operation.
 
         The value defaults to :code:`None`, indicating that no such limit applies.
@@ -258,14 +258,14 @@ def list_collections(**kwargs):
     """
     pass
 
-def has_collection(collection_name):
+def has_collection(name):
     """
     Shows whether a collection after the specified name exists.
 
-    :param collection_name: Specifies the name of the collection in concern.
+    :param name: Specifies the name of the collection in concern.
 
         A collection name should be a string of 1 to 255 characters, starting with a letter or an underscore (_) and containing only numbers, letters, and underscores (_).
-    :type collection_name: str 
+    :type name: str 
     :raises:
     :return: A boolean value indicating whether the collection exists.
     :rtype: bool
@@ -277,6 +277,7 @@ def has_collection(collection_name):
     """
     pass
 
+# alias
 def create_alias(alias, collection_name, **kwargs):
     """
     Creates an alias for a collection.
@@ -414,10 +415,10 @@ def create_index(collection_name, field_name, index_name, index_params, **kwargs
     """
     Creates an index on the specified field in a collection.
 
-    :param collection: Specifies a collection desired for the operation.
+    :param collection_name: Specifies a collection desired for the operation.
 
         A collection name should be a string of 1 to 255 characters, starting with a letter or an underscore (_) and containing only numbers, letters, and underscores (_).
-    :type collection: str
+    :type collection_name: str
     :param field_name: Specifies the name of the field on which the index is to be created.
 
         A field name should be a string of 1 to 255 characters, starting with a letter or an underscore (_) and containing only numbers, letters, and underscores (_).   
@@ -472,10 +473,10 @@ def describe_index(collection_name, index_name, **kwargs):
     """
     Describes the index of a collection.
 
-    :param collection: Specifies a collection desired for the collection.
+    :param collection_name: Specifies a collection desired for the collection.
 
         A collection collection should be a string of 1 to 255 characters, starting with a letter or an underscore (_) and containing only numbers, letters, and underscores (_).
-    :type collection: str
+    :type collection_name: str
     :param index_name: Specifies the name of the index for further reference.
 
         An index name should be a string of 1 to 255 characters, starting with a letter or an underscore (_) and containing only numbers, letters, and underscores (_).
@@ -485,8 +486,8 @@ def describe_index(collection_name, index_name, **kwargs):
         The default value is :code:`None`, indicating that no such limit applies.
     :type timeout: double or None
     :raises:
-    :returns: A list of immutable attributes of the index.
-    :rtype: dict  
+    :returns: An :code:`IndexInfo` object lists the alias details
+    :rtype: :code:`IndexInfo`  
 
     >>> import pymilvus
     >>> pymilvus.connect(ip_addr, port)
@@ -506,10 +507,10 @@ def drop_index(collection_name, index_name, **kwargs):
     """
     Drops the index of a collection.
 
-    :param collection: Specifies a collection desired for the collection.
+    :param collection_name: Specifies a collection desired for the collection.
 
-        A collection collection should be a string of 1 to 255 characters, starting with a letter or an underscore (_) and containing only numbers, letters, and underscores (_).
-    :type collection: str
+        A collection name should be a string of 1 to 255 characters, starting with a letter or an underscore (_) and containing only numbers, letters, and underscores (_).
+    :type collection_name: str
     :param index_name: Specifies the name of the index for further reference.
 
         An index name should be a string of 1 to 255 characters, starting with a letter or an underscore (_) and containing only numbers, letters, and underscores (_).
@@ -520,8 +521,54 @@ def drop_index(collection_name, index_name, **kwargs):
     :type timeout: double or None  
 
     :raises: 
-    :returns: An index-drop task
-    :rtype: :class:`Type`  
+    :returns: No returns, indicating that this operation succeeds.
+    :rtype: :code:`None`  
+    """
+    pass
+
+def has_index(collection_name, index_name, **kwargs):
+    """
+    Drops the index of a collection.
+
+    :param collection_name: Specifies a collection desired for the collection.
+
+        A collection name should be a string of 1 to 255 characters, starting with a letter or an underscore (_) and containing only numbers, letters, and underscores (_).
+    :type collection_name: str
+    :param index_name: Specifies the name of the index for further reference.
+
+        An index name should be a string of 1 to 255 characters, starting with a letter or an underscore (_) and containing only numbers, letters, and underscores (_).
+    :type index_name: str   
+    :param timeout: (Optional) Specifies the timeout duration of this operation.
+
+        The default value is :code:`None`, indicating that no such limit applies.
+    :type timeout: double or None  
+
+    :raises: 
+    :returns: A boolean value indicating whether the specified index exists.
+    :rtype: bool
+    """    
+    pass
+
+def list_indexes(collection_name, field_name, **kwargs):
+    """
+    Lists the indexes built on the specified field.
+
+    :param collection_name: Specifies a collection desired for the collection.
+
+        A collection name should be a string of 1 to 255 characters, starting with a letter or an underscore (_) and containing only numbers, letters, and underscores (_).
+    :type collection_name: str
+    :param field_name: Specifies the name of the field for further reference.
+
+        An field name should be a string of 1 to 255 characters, starting with a letter or an underscore (_) and containing only numbers, letters, and underscores (_).
+    :type field_name: str   
+    :param timeout: (Optional) Specifies the timeout duration of this operation.
+
+        The default value is :code:`None`, indicating that no such limit applies.
+    :type timeout: double or None  
+
+    :raises: 
+    :returns: A list of index names
+    :rtype: list[str]
     """
     pass
 
@@ -1041,7 +1088,7 @@ def delete_by_expr(collection_name, **kwargs):
     """
     pass
 
-def delete(collection_name, primary_keys, **kwargs):
+def delete(collection_name, primary_keys, partition_names=None, **kwargs):
     """
     Deletes specified entities from a collection.
 

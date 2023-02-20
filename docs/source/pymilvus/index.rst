@@ -28,6 +28,8 @@ Functions
     create_index
     describe_index
     drop_index
+    list_indexes
+    has_index
 
 .. rubric:: DML Operations
 
