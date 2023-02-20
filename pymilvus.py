@@ -532,7 +532,7 @@ def drop_index(collection_name, index_name, **kwargs):
 
 def has_index(collection_name, index_name, **kwargs):
     """
-    Drops the index of a collection.
+    Shows whether the specified index exists in the collection.
 
     :param collection_name: Specifies a collection desired for the collection.
 
