@@ -45,10 +45,10 @@ def create_collection(name, schema, **kwargs):
 
         The value defaults to an empty string.
     :type description: str
-    :param timeout: (Optional) Specifies the timeout duration of this operation in milliseconds.
+    :param timeout: (Optional) Specifies the timeout duration of this operation in seconds.
 
-        The value defaults to None, indicating that no such limit applies.
-    :type timeout: double or None
+        The value defaults to :code:`None`, indicating that no such limit applies.
+    :type timeout: float or None
     :raises:
     :returns: No returns, indicating that this operation succeeds.
     :rtype: :code:`None`
@@ -102,10 +102,10 @@ def describe_collection(name, **kwargs):
 
         A collection name should be a string of 1 to 255 characters, starting with a letter or an underscore (_) and containing only numbers, letters, and underscores (_).
     :type name: str
-    :param timeout: (Optional) Specifies the timeout duration of this operation.
+    :param timeout: (Optional) Specifies the timeout duration of this operation in seconds.
 
         The value defaults to :code:`None`, indicating that no such limit applies.
-    :type timeout: double or None
+    :type timeout: float or None
     :raises:
     :returns: A :code:`CollectionInfo` object lists the collection details
     :rtypes: :code:`CollectionInfo`
@@ -142,10 +142,10 @@ def load_collection(name, **kwargs):
 
         The value is an integer no greater than xx and defaults to 1, indicating that only one replica is loaded.
     :type num_replicas: int
-    :param timeout: (Optional) Specifies the timeout duration of this operation.
+    :param timeout: (Optional) Specifies the timeout duration of this operation in seconds.
 
         The value defaults to :code:`None`, indicating that no such limit applies.
-    :type timeout: double or None
+    :type timeout: float or None
     :raises:
     :returns: A collection-loading task
     :rtype: :class:`Task`
@@ -165,10 +165,10 @@ def release_collection(name, **kwargs):
 
         A collection name should be a string of 1 to 255 characters, starting with a letter or an underscore (_) and containing only numbers, letters, and underscores (_).
     :type name: str
-    :param timeout: (Optional) Specifies the timeout duration of this operation.
+    :param timeout: (Optional) Specifies the timeout duration of this operation in seconds.
 
         The value defaults to :code:`None`, indicating that no such limit applies.
-    :type timeout: double or None
+    :type timeout: float or None
     :raises:
     :return: No returns, indicating that this operation succeeds.
     :rtype: :code:`None`
@@ -188,10 +188,10 @@ def drop_collection(name, **kwargs):
 
         A collection name should be a string of 1 to 255 characters, starting with a letter or an underscore (_) and containing only numbers, letters, and underscores (_).
     :type name: str
-    :param timeout: (Optional) Specifies the timeout duration of this operation.
+    :param timeout: (Optional) Specifies the timeout duration of this operation in seconds.
 
         The value defaults to :code:`None`, indicating that no such limit applies.
-    :type timeout: double or None
+    :type timeout: float or None
     :raises:
     :return: No returns, indicating that this operation succeeds.
     :rtype: :class:`None`
@@ -210,10 +210,10 @@ def get_collection_statistics(name, **kwargs):
 
         A collection name should be a string of 1 to 255 characters, starting with a letter or an underscore (_) and containing only numbers, letters, and underscores (_).
     :type name: str
-    :param timeout: (Optional) Specifies the timeout duration of this operation.
+    :param timeout: (Optional) Specifies the timeout duration of this operation in seconds.
 
         The value defaults to :code:`None`, indicating that no such limit applies.
-    :type timeout: double or None
+    :type timeout: float or None
     :raises:    
     :returns: All statistical items of the collection
     :rtype: dict
@@ -243,10 +243,10 @@ def list_collections(**kwargs):
     """
     Lists all collection names in the database.
 
-    :param timeout: (Optional) Specifies the timeout duration of this operation.
+    :param timeout: (Optional) Specifies the timeout duration of this operation in seconds.
 
         The value defaults to :code:`None`, indicating that no such limit applies.
-    :type timeout: double or None
+    :type timeout: float or None
     :raises:    
     :returns: A list of collection names
     :rtype: list[str]    
@@ -266,10 +266,10 @@ def has_collection(name, **kwargs):
 
         A collection name should be a string of 1 to 255 characters, starting with a letter or an underscore (_) and containing only numbers, letters, and underscores (_).
     :type name: str 
-    :param timeout: (Optional) Specifies the timeout duration of this operation.
+    :param timeout: (Optional) Specifies the timeout duration of this operation in seconds.
 
         The value defaults to :code:`None`, indicating that no such limit applies.
-    :type timeout: double or None
+    :type timeout: float or None
     :raises:
     :return: A boolean value indicating whether the collection exists.
     :rtype: bool
@@ -294,10 +294,10 @@ def create_alias(alias, collection_name, **kwargs):
 
         A collection name should be a string of 1 to 255 characters, starting with a letter or an underscore (_) and containing only numbers, letters, and underscores (_).
     :type collection_name: str
-    :param timeout: (Optional) Specifies the timeout duration of this operation.
+    :param timeout: (Optional) Specifies the timeout duration of this operation in seconds.
 
-        The default value is :code:`None`, indicating that no such limit applies.
-    :type timeout: double or None
+        The value defaults to :code:`None`, indicating that no such limit applies.
+    :type timeout: float or None
     :raises:
     :returns: No returns, indicating that this operation succeeds.
     :rtype: :code:`None`
@@ -320,10 +320,10 @@ def alter_alias(alias, collection_name, **kwargs):
 
         A collection name should be a string of 1 to 255 characters, starting with a letter or an underscore (_) and containing only numbers, letters, and underscores (_).
     :type collection_name: str
-    :param timeout: (Optional) Specifies the timeout duration of this operation.
+    :param timeout: (Optional) Specifies the timeout duration of this operation in seconds.
 
-        The default value is :code:`None`, indicating that no such limit applies.
-    :type timeout: double or None
+        The value defaults to :code:`None`, indicating that no such limit applies.
+    :type timeout: float or None
     :raises:
     :returns: No returns, indicating that this operation succeeds.
     :rtype: :code:`None`
@@ -342,10 +342,10 @@ def list_aliases(collection_name, **kwargs):
 
         A collection name should be a string of 1 to 255 characters, starting with a letter or an underscore (_) and containing only numbers, letters, and underscores (_).
     :type collection_name: str
-    :param timeout: (Optional) Specifies the timeout duration of this operation.
+    :param timeout: (Optional) Specifies the timeout duration of this operation in seconds.
 
-        The default value is :code:`None`, indicating that no such limit applies.
-    :type timeout: double or None
+        The value defaults to :code:`None`, indicating that no such limit applies.
+    :type timeout: float or None
     :raises:    
     :returns: A list of aliases associated with a collection.
     :rtype: list[str]
@@ -365,10 +365,10 @@ def drop_alias(alias, **kwargs):
 
         A collection alias should be a string of 1 to 255 characters, starting with a letter or an underscore (_) and containing only numbers, letters, and underscores (_).
     :type alias: str
-    :param timeout: (Optional) Specifies the timeout duration of this operation.
+    :param timeout: (Optional) Specifies the timeout duration of this operation in seconds.
 
-        The default value is :code:`None`, indicating that no such limit applies.
-    :type timeout: double or None
+        The value defaults to :code:`None`, indicating that no such limit applies.
+    :type timeout: float or None
     :raises:
     :returns: No returns, indicating that this operation succeeds.
     :rtype: :code:`None`
@@ -387,10 +387,10 @@ def describe_alias(alias, **kwargs):
 
         A collection alias should be a string of 1 to 255 characters, starting with a letter or an underscore (_) and containing only numbers, letters, and underscores (_).
     :type alias: str 
-    :param timeout: (Optional) Specifies the timeout duration of this operation.
+    :param timeout: (Optional) Specifies the timeout duration of this operation in seconds.
 
-        The default value is :code:`None`, indicating that no such limit applies.
-    :type timeout: double or None
+        The value defaults to :code:`None`, indicating that no such limit applies.
+    :type timeout: float or None
     :raises:
     :returns: An :code:`AliasInfo` object lists the alias details
     :rtype: :code:`AliasInfo`   
@@ -405,10 +405,10 @@ def has_alias(alias, **kwargs):
 
         A collection alias should be a string of 1 to 255 characters, starting with a letter or an underscore (_) and containing only numbers, letters, and underscores (_).
     :type alias: str 
-    :param timeout: (Optional) Specifies the timeout duration of this operation.
+    :param timeout: (Optional) Specifies the timeout duration of this operation in seconds.
 
-        The default value is :code:`None`, indicating that no such limit applies.
-    :type timeout: double or None
+        The value defaults to :code:`None`, indicating that no such limit applies.
+    :type timeout: float or None
     :raises:
     :returns: A boolean value indicating whether the specified alias exists
     :rtype: bool
@@ -452,10 +452,10 @@ def create_index(collection_name, field_name, index_name, index_params, **kwargs
               - `dict`
               - Specifies applicable index-building parameters. These parameters vary with index types. For details, see `In-memory Index <https://milvus.io/docs/index.md>`_ and `On-disk Index <https://milvus.io/docs/disk_index.md>`_.
 
-    :param timeout: (Optional) Specifies the timeout duration of this operation.
+    :param timeout: (Optional) Specifies the timeout duration of this operation in seconds.
 
-        The default value is :code:`None`, indicating that no such limit applies.
-    :type timeout: double or None
+        The value defaults to :code:`None`, indicating that no such limit applies.
+    :type timeout: float or None
     :raises:
     :returns: An index-creating task
     :rtype: :class:`Task` 
@@ -485,10 +485,10 @@ def describe_index(collection_name, index_name, **kwargs):
 
         An index name should be a string of 1 to 255 characters, starting with a letter or an underscore (_) and containing only numbers, letters, and underscores (_).
     :type index_name: str   
-    :param timeout: (Optional) Specifies the timeout duration of this operation.
+    :param timeout: (Optional) Specifies the timeout duration of this operation in seconds.
 
-        The default value is :code:`None`, indicating that no such limit applies.
-    :type timeout: double or None
+        The value defaults to :code:`None`, indicating that no such limit applies.
+    :type timeout: float or None
     :raises:
     :returns: An :code:`IndexInfo` object lists the alias details
     :rtype: :code:`IndexInfo`  
@@ -519,10 +519,10 @@ def drop_index(collection_name, index_name, **kwargs):
 
         An index name should be a string of 1 to 255 characters, starting with a letter or an underscore (_) and containing only numbers, letters, and underscores (_).
     :type index_name: str   
-    :param timeout: (Optional) Specifies the timeout duration of this operation.
+    :param timeout: (Optional) Specifies the timeout duration of this operation in seconds.
 
-        The default value is :code:`None`, indicating that no such limit applies.
-    :type timeout: double or None  
+        The value defaults to :code:`None`, indicating that no such limit applies.
+    :type timeout: float or None
 
     :raises: 
     :returns: No returns, indicating that this operation succeeds.
@@ -542,10 +542,10 @@ def has_index(collection_name, index_name, **kwargs):
 
         An index name should be a string of 1 to 255 characters, starting with a letter or an underscore (_) and containing only numbers, letters, and underscores (_).
     :type index_name: str   
-    :param timeout: (Optional) Specifies the timeout duration of this operation.
+    :param timeout: (Optional) Specifies the timeout duration of this operation in seconds.
 
-        The default value is :code:`None`, indicating that no such limit applies.
-    :type timeout: double or None  
+        The value defaults to :code:`None`, indicating that no such limit applies.
+    :type timeout: float or None 
 
     :raises: 
     :returns: A boolean value indicating whether the specified index exists.
@@ -565,10 +565,10 @@ def list_indexes(collection_name, field_name, **kwargs):
 
         An field name should be a string of 1 to 255 characters, starting with a letter or an underscore (_) and containing only numbers, letters, and underscores (_).
     :type field_name: str   
-    :param timeout: (Optional) Specifies the timeout duration of this operation.
+    :param timeout: (Optional) Specifies the timeout duration of this operation in seconds.
 
-        The default value is :code:`None`, indicating that no such limit applies.
-    :type timeout: double or None  
+        The value defaults to :code:`None`, indicating that no such limit applies.
+    :type timeout: float or None 
 
     :raises: 
     :returns: A list of index names
@@ -588,10 +588,10 @@ def create_partition(collection_name, partition_name, **kwargs):
 
         A partition name should be a string of 1 to 255 characters, starting with a letter or an underscore (_) and containing only numbers, letters, and underscores (_).
     :type partition_name: str  
-    :param timeout: (Optional) Specifies the timeout duration of this operation.
+    :param timeout: (Optional) Specifies the timeout duration of this operation in seconds.
 
-        The default value is :code:`None`, indicating that no such limit applies.
-    :type timeout: double or None
+        The value defaults to :code:`None`, indicating that no such limit applies.
+    :type timeout: float or None
     :raises:
     :returns: No returns, indicating that this operation succeeds. 
     :rtype: :code:`None`
@@ -614,10 +614,10 @@ def describe_partition(collection_name, partition_name, **kwargs):
 
         A partition name should be a string of 1 to 255 characters, starting with a letter or an underscore (_) and containing only numbers, letters, and underscores (_).
     :type partition_name: str
-    :param timeout: (Optional) Specifies the timeout duration of this operation.
+    :param timeout: (Optional) Specifies the timeout duration of this operation in seconds.
 
-        The default value is :code:`None`, indicating that no such limit applies.
-    :type timeout: double or None
+        The value defaults to :code:`None`, indicating that no such limit applies.
+    :type timeout: float or None
     :raises:
     :returns: A list of immutable attributes of the partition 
     :rtype: dict
@@ -651,10 +651,10 @@ def load_partition(collection_name, partition_names, **kwargs):
 
         A partition name should be a string of 1 to 255 characters, starting with a letter or an underscore (_) and containing only numbers, letters, and underscores (_).
     :type partition_name: list[str]  
-    :param timeout: (Optional) Specifies the timeout duration of this operation.
+    :param timeout: (Optional) Specifies the timeout duration of this operation in seconds.
 
-        The default value is :code:`None`, indicating that no such limit applies.
-    :type timeout: double or None  
+        The value defaults to :code:`None`, indicating that no such limit applies.
+    :type timeout: float or None
     :raises:
     :returns: A partition-loading task 
     :rtype: :class:`Task`
@@ -678,10 +678,10 @@ def release_partition(collection_name, partition_names, **kwargs):
 
         A partition name should be a string of 1 to 255 characters, starting with a letter or an underscore (_) and containing only numbers, letters, and underscores (_).
     :type partition_name: str
-    :param timeout: (Optional) Specifies the timeout duration of this operation.
+    :param timeout: (Optional) Specifies the timeout duration of this operation in seconds.
 
-        The default value is :code:`None`, indicating that no such limit applies.
-    :type timeout: double or None  
+        The value defaults to :code:`None`, indicating that no such limit applies.
+    :type timeout: float or None 
     :raises:
     :returns: No returns, indicating that this operation succeeds.
     :rtype: :code:`None`  
@@ -705,10 +705,10 @@ def drop_partition(collection_name, partition_name, **kwargs):
 
         A partition name should be a string of 1 to 255 characters, starting with a letter or an underscore (_) and containing only numbers, letters, and underscores (_).
     :type partition_name: str
-    :param timeout: (Optional) Specifies the timeout duration of this operation.
+    :param timeout: (Optional) Specifies the timeout duration of this operation in seconds.
 
-        The default value is :code:`None`, indicating that no such limit applies.
-    :type timeout: double or None  
+        The value defaults to :code:`None`, indicating that no such limit applies.
+    :type timeout: float or None 
     :raises:
     :returns: No returns, indicating that this operation succeeds.
     :rtype: :code:`None`  
@@ -731,10 +731,10 @@ def get_partition_statistics(collection_name, partition_names, **kwargs):
 
         A partition name should be a string of 1 to 255 characters, starting with a letter or an underscore (_) and containing only numbers, letters, and underscores (_).
     :type partition_name: str
-    :param timeout: (Optional) Specifies the timeout duration of this operation.
+    :param timeout: (Optional) Specifies the timeout duration of this operation in seconds.
 
-        The default value is :code:`None`, indicating that no such limit applies.
-    :type timeout: double or None 
+        The value defaults to :code:`None`, indicating that no such limit applies.
+    :type timeout: float or None
     :raises: 
     :return: All statistical items of the specified partitions.
     :rtype: dict
@@ -755,10 +755,10 @@ def list_partitions(collection_name, **kwargs):
 
         A collection name should be a string of 1 to 255 characters, starting with a letter or an underscore (_) and containing only numbers, letters, and underscores (_).
     :type collection_name: str 
-    :param timeout: (Optional) Specifies the timeout duration of this operation.
+    :param timeout: (Optional) Specifies the timeout duration of this operation in seconds.
 
-        The default value is :code:`None`, indicating that no such limit applies.
-    :type timeout: double or None
+        The value defaults to :code:`None`, indicating that no such limit applies.
+    :type timeout: float or None
     :raises: 
     :return: Names of all partitions in the collection
     :rtype: list[str]   
@@ -782,10 +782,10 @@ def has_partition(collection_name, partition_name, **kwargs):
 
         A partition name should be a string of 1 to 255 characters, starting with a letter or an underscore (_) and containing only numbers, letters, and underscores (_).
     :type partition_name: str
-    :param timeout: (Optional) Specifies the timeout duration of this operation.
+    :param timeout: (Optional) Specifies the timeout duration of this operation in seconds.
 
-        The default value is :code:`None`, indicating that no such limit applies.
-    :type timeout: double or None
+        The value defaults to :code:`None`, indicating that no such limit applies.
+    :type timeout: float or None
     :raises:
     :returns: A boolean value indicating whether the partition exists.
     :rtype: bool
@@ -895,10 +895,10 @@ def insert(collection_name, **kwargs):
 
         A partition name should be a string of 1 to 255 characters, starting with a letter or an underscore (_) and containing only numbers, letters, and underscores (_). The default value is :code:`None`.
     :type partition_name: str or None  
-    :param timeout: (Optional) Specifies the timeout duration of this operation.
+    :param timeout: (Optional) Specifies the timeout duration of this operation in seconds.
 
-        The default value is :code:`None`, indicating that no such limit applies.
-    :type timeout: double or None
+        The value defaults to :code:`None`, indicating that no such limit applies.
+    :type timeout: float or None
     :raises:
     :returns: No returns, indicating that this operation succeeds.
     :rtype: :code:`None`
@@ -965,10 +965,10 @@ def bulk_insert(collection_name, file, **kwargs):
 
         A partition name should be a string of 1 to 255 characters, starting with a letter or an underscore (_) and containing only numbers, letters, and underscores (_). The default value is :code:`None`.
     :type partition_name: str or None  
-    :param timeout: (Optional) Specifies the timeout duration of this operation.
+    :param timeout: (Optional) Specifies the timeout duration of this operation in seconds.
 
-        The default value is :code:`None`, indicating that no such limit applies.
-    :type timeout: double or None 
+        The value defaults to :code:`None`, indicating that no such limit applies.
+    :type timeout: float or None
     :raises:
     :return: A handler of the bulk-insert task.
     :rtype: :class:`Task` 
@@ -993,10 +993,10 @@ def list_bulk_insert_tasks(**kwargs):
 
         The value defaults to :code:`None`, indicating that no such limit applies.
     :type collection_name: str or None
-    :param timeout: (Optional) Specifies the timeout duration of this operation.
+    :param timeout: (Optional) Specifies the timeout duration of this operation in seconds.
 
-        The default value is :code:`None`, indicating that no such limit applies.
-    :type timeout: double or None 
+        The value defaults to :code:`None`, indicating that no such limit applies.
+    :type timeout: float or None 
     :raises:
     :returns: A list of bulk-insert task IDs.
     :rtype: list[str]
@@ -1017,10 +1017,10 @@ def get_bulk_insert_state(task_id, **kwargs):
 
         You can get the ID of a task using :func:`list_bulk_insert_tasks()`
     :type task_id: str
-    :param timeout: (Optional) Specifies the timeout duration of this operation.
+    :param timeout: (Optional) Specifies the timeout duration of this operation in seconds.
 
-        The default value is :code:`None`, indicating that no such limit applies.
-    :type timeout: double or None 
+        The value defaults to :code:`None`, indicating that no such limit applies.
+    :type timeout: float or None
     :raises:
     :returns: State of the specified task.
     :rtype: dict
@@ -1042,10 +1042,10 @@ def flush(collection_name, **kwargs):
 
         A collection name should be a string of 1 to 255 characters, starting with a letter or an underscore (_) and containing only numbers, letters, and underscores (_).
     :type collection_name: str 
-    :param timeout: (Optional) Specifies the timeout duration of this operation.
+    :param timeout: (Optional) Specifies the timeout duration of this operation in seconds.
 
-        The default value is :code:`None`, indicating that no such limit applies.
-    :type timeout: double or None 
+        The value defaults to :code:`None`, indicating that no such limit applies.
+    :type timeout: float or None 
     :raises:
     :returns: No returns, indicating that this operation succeeds.
     :rtype: :code:`None`
@@ -1078,10 +1078,10 @@ def delete_by_expr(collection_name, **kwargs):
 
         A valid boolean expression should comprise only the :code:`in` operator with two operands.
     :type expr: str
-    :param timeout: (Optional) Specifies the timeout duration of this operation.
+    :param timeout: (Optional) Specifies the timeout duration of this operation in seconds.
 
-        The default value is :code:`None`, indicating that no such limit applies.
-    :type timeout: double or None 
+        The value defaults to :code:`None`, indicating that no such limit applies.
+    :type timeout: float or None
     :raises:
     :returns: An entity-deleting task
     :rtype: :class:`Task`
@@ -1104,10 +1104,10 @@ def delete(collection_name, primary_keys, partition_names=None, **kwargs):
 
         Including a non-existent primary key in the list may result in failures.
     :type primary_keys: list[int]
-    :param timeout: (Optional) Specifies the timeout duration of this operation.
+    :param timeout: (Optional) Specifies the timeout duration of this operation in seconds.
 
-        The default value is :code:`None`, indicating that no such limit applies.
-    :type timeout: double or None 
+        The value defaults to :code:`None`, indicating that no such limit applies.
+    :type timeout: float or None
     :raises:
     :returns: An entity-deleting task
     :rtype: :class:`Task`
